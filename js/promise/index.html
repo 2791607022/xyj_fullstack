@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1异步 i/o 内存中切换到硬盘
+    //setTimeout(function(){  console.log("1");},1000)
+    //别的方案
+   const p1=new Promise((resolve,reject) =>
+   {   //费时的操作
+        //  去一个网站。给我们反馈一条情话，一来一回http本质？花时间的?花时间的东西芳promise里面。包装一个执行函数
+        //封装了一个http 一去一回的请求 花时间。fetch去取。
+        fetch("https:127.0.0.1:8080/user.json")
+        .then(data=>data.json()
+        )
+        .then(data=>resolve(data)
+         )
+         resolve(1);}
+        )
+        .p1.then((data)=>{console.log(data)})
+        console.log(3);
+       //向后端发送请求
+       //setTimeout(()=>{console.log(1)},1000)
+   }
+   )//promise 许诺
+    console.log("2");//先输出2,再输出1</script>
+</body>
+</html>
