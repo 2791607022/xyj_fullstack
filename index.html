@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="douban.css">
 </head>
 <body>
-    <script>
-        //显示players
-        //两个应用 1 json-server：3000/posts/comments 2静态网页应用 8080
-      /* 
-        fetch("https://www.runoob.com/try/ajax/jsonp.php")
-        .then(data=>data.json())
-        .then(data=>{
-            console.log(data);
-        })
-         */
-        window.callbackFunction=(data)=>{
-         console.log(data);
-        }
-        const script=document.createElement('script')
-        script.src="https://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction";
-        document.body.appendChild(script);
-    </script>
+    <div class="db_staticNav">
+        <a href="/" class="db_staticNav__log">
+            <img src="https://img3.doubanio.com/f/frodo/144e6fb7d96701944e7dbb1a9bad51bdb1debe29/pics/app/logo.png
+            " alt="" class="db_staticNav__icon"></a>
+        <a href="#" class="db_staticNav__info">
+            <h2>豆瓣<span>APP</span></h2>
+            <p>记录你的书影音生活</p>
+        </a>
+        <a href="#" class="db_staticNav__btn"></a>
+    </div>
+    <section class="db_billboard">
+        <h2 class="db_billboard_title">
+            <span>豆瓣榜单</span>
+            <a href="" class="db_billboard_more">
+                用App查看更多
+            </a>
+        </h2>
+        <div>
+            <a href="#" class="db_billboard__item">
+                <div class="db_billboard__type">
+                    <div>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </div>
+                </div>
+                <ul class="db_billboard__list"></ul>
+                <div class="db_billboard__btn"></div>
+            </a>
+        </div>
+    </section>
 </body>
 </html>
