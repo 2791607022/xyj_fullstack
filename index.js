@@ -1,26 +1,28 @@
-//index.js
-//获取应用实例
-const app = getApp()
-const WXAPI = require('apifm-wxapi')
+//使用云端数据
+const db = wx.cloud.database();//连接云端数据库
+const phoneTable = db.collection("products");//
 Page({
-  data: {
-    banners:[]
+  data:{
+    phone_list:[]
   },
-  //事件处理函数
-
-  onLoad: function () {
-   //启动滑屏效果
-   //图片数据哪里来？
-   WXAPI
-        .banners({//头图 banner 位
-          type:'app'
-        })
-        .then(res=>{
-        this.setData({banners:res.data})
-        })
- 
-  },
-  getUserInfo: function(e) {
-
+  onLoad(){
+    //加载数据
+    db
+      .collection("products")
+      .get({
+        success: res => {
+          // console.log(res);
+          this.setData({
+            phone_list:res.data
+          })
+        }
+      })
+    
+  }, viewItem(e){
+    var id=e.currentTaget.dataset.id;
+    url:'../phoneDetail/phoneDetail?id='+id;
+    
   }
-})
+ 
+}
+)

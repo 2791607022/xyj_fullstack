@@ -1,13 +1,12 @@
-<swiper class="swiper_box" bindchange="swiperchange" indicator-dots="true" indicator-active-color="#fff"> 
-<swiper-item wx:for="{{banners}}" wx:key="id">
-<image mode="aspectFill" src="{{item.picUrl}}"/>
-</swiper-item>
-</swiper>
-<!-- <swiper class="swiper_box" bindchange="swiperchange" indicator-dots="true" indicator-active-color="#fff">
-  <swiper-item wx:for="{{banners}}" wx:key="id">
-    <image mode="aspectFill" src="{{item.picUrl}}"/>
-  </swiper-item>
-</swiper> -->
-<view class="btn">
-<var-button type="info">进入</var-button>
+
+<view wx:for="{{phone_list}}" wx:for-item="phone" wx:key="_id"
+  bind:click="viewItem"
+  data-id="{{phone._id}}"
+  bindtap="{{viweItem}}"
+>
+ <van-card title="{{phone.title}}"
+ thumb="{{phone.image}}"
+ desc="{{phone.color}}"
+ price="{{phone.price}}"
+ ></van-card>
 </view>
