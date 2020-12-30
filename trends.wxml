@@ -1,0 +1,7 @@
+<!--pages/trends/trends.wxml-->
+<view class='trends page'>
+<search custom-class='elevation {{ theme }}' placeholder="Search Users or Repositories" bind:search="onSearch"></search>
+  <trend theme='{{ theme }}' repo='{{item}}' 
+  wx:for="{{trends}}" 
+  wx:key="{{index}}"></trend>
+</view>
