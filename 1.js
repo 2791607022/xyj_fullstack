@@ -1,16 +1,10 @@
-/*函数名，对象 js 类型 附属于objct的可运行的对象*/ 
-const arr=[1,2,3];
-const a="hello";//申明变量 undefined 类型未定义
-console.log(typeof arr);
-arr.push(4);
-const obj={a:1};
-obj.b=2;
-console.log(arr);//a=1;
-console.log(typeof a);
-function Cart()
-{
-    this.type="折耳";
-}
-Cart.prototype.sayHello=function(){
-    console.log('喵');
-}
+let ran_num=Math.random();
+console.log(ran_num)
+console.log(Math.floor(2.3))
+console.log(Math.ceil(7.1));
+console.log(Math.round(25.5));
+//0-9之间的随机数
+console.log(Math.random()*10)
+let max=100,min=0;
+//在最大值和最小值之间的随机数
+console.log(Math.floor(Math.random()*(max-min)))+min
