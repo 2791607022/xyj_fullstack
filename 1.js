@@ -1,10 +1,10 @@
-let ran_num=Math.random();
-console.log(ran_num)
-console.log(Math.floor(2.3))
-console.log(Math.ceil(7.1));
-console.log(Math.round(25.5));
-//0-9之间的随机数
-console.log(Math.random()*10)
-let max=100,min=0;
-//在最大值和最小值之间的随机数
-console.log(Math.floor(Math.random()*(max-min)))+min
+//user 为Object
+const getUserInfo=function(user){
+    //判断有 nsme age
+    if(!user||typeof user!='object'||!Object.keys(user).includes("name")||!Object.keys(user).includes("age"))
+     throw new Error('参数错误')
+ return `name:${user.name},age:${user.age}`
+
+}
+console.log(getUserInfo({name:'koala',age:'18'}));
+//限制下这种传参的随意性
