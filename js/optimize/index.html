@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //http->file
+        //req res html text/html 解析html DOMContentLoaded
+        // 1. 尽快静态页面显示  历史原因  onload 资源加载完成
+        let oContainer=document.getElementById('container')
+        console.log(oContainer)//null
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{console.log('DomContentLoaded')},false);//dom+css结合完成了
+        window.addEventListener('load',()=>{console.log('load')},false)//各种资源加载完成
+        //如何优化
+        let oContainer=document.getElementById('container')
+        let content=''
+        for(var count=0;count<10000;count++)
+        {
+            content+='<span>我是一个小测试</span>'
+            
+        }
+        oContainer
+            .innerHTML+=content;
+    </script>
+</body>
+</html>
