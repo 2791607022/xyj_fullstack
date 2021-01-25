@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">点击</button>
+    <script>
+        const btn =document.querySelector('.btn')
+        let xhr=new XMLHttpRequest();//ajax 耗时任务
+        //稍微慢一点，不精确
+        setTimeout(()=>{
+            console.log('timeout');
+        },0)
+        btn.addEventListener('click',()=>{
+            console.log('btn clicked')
+        },false)
+        function loadAjaxContent(url,callback){//封装ajax 的请求 
+            console.log(xhr.readyState)
+            xhr.open('GET',url);//GET 动词 http 三次握手 建立好通信的通道
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200)//readyState的值[0 未初始化 还没有调用open()];[1 请求建立 但还未发送 ];[2 请求已发送 正在等待中 服务器计算中 ];[3 请求处理中  已有部分数据 大的数据包 分片];[4 响应已完成 可以获取并使用服务器的响应了]
+                {
+                    callback(xhr.responseText);//xhr 时代 ie6 没有json ;json作为数据传输的格式，比xml更轻量
+                }
+            }
+            xhr.send();
+            console.log(xhr.readyState,'------------')
+        }//更精细化的处理异步问题
+        //promise 出现的前夜 
+        //异步过程 callback->promise+then ->generator->async await先得到阮一峰的git信息 ,然后得到阮一峰的所有repo
+        loadAjaxContent('https://api.github.com/users/ruanyf',(users)=>{//保证异步任务的顺序处理，用回调函数,嵌套使用
+            console.log(users,'users');
+            loadAjaxContent('https://api.github.com/users/ruanyf/repos'),(repos)=>{
+            console.log(repos,'repos')
+            loadAjaxContent('https://api.github.com/search/issues?q=ruanyf',(result)=>{
+            console.log(result,'result')
+            })
+        }
+        });
+        //resolve ,reject 就是交出执行的控制权
+        let p1=new Promise((resolve,reject)=>{//promise 函数是立即执行的
+            xhr.open('GET','https://api.github.com/users/ruanyf');
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200)
+                {
+                    resolve(JSON.parse(xhr.responseText))
+                }
+            }
+            xhr.send()
+        })
+
+        // let p2=new Promise((resolve,reject)=>{//promise 函数是立即执行的
+         
+        //     xhr.open('GET','https://api.github.com/users/ruanyf/repos');
+        //     xhr.onreadystatechange=function(){
+        //         if(xhr.readyState==4&&xhr.status==200)
+        //         {
+        //             resolve(JSON.parse(xhr.responseText))
+        //         }
+        //     }
+        //     xhr.send()
+        // })
+        p1.then(data=>{
+            console.log(data)
+        }
+
+        )
+        console.log('aaa');
+        fetch('https://api.github.com/users/ruanyf')
+        //回调地狱
+        .then(date=>date.json())//readstream 二进制流 json化一下
+        .then(date =>{
+            console.log('user',date);
+           return fetch('https://api.github.com/ruanyf/repos')
+           
+        })
+        .then(date=>date.json())
+        .then(date=>{
+            console.log("repos",date)
+        })
+    </script>
+</body>
+</html>
