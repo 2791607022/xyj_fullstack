@@ -1,2 +1,2 @@
-import './common.css'
-console.log('webpack')
+import './common.css';
+console.log('hello world');
