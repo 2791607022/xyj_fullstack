@@ -1,21 +1,22 @@
-1. 首页设计点营业/打烊的功能
-2. 页面功能
- 搜索 ，swiper,列表
- 组件化
-3. isShow true flase 没准备好
-4. 搜索
-5. 轮播图
-  大项目页面比较长，用组件封装出去，没有那么长  提高复用性
-  app<- pages<- components<-原始的组件    
-  组件有data 和 property 概念
-6. tap 切换
- 1. 设置数据 tab 状态相关 activeTypeId
- 2. 多个type 设置数据
- -css flex 1/4
 
-7. 数据库设计
- - fruit-borad 
-  支持 where 操作 
-  myClass 0 1 2 3
-  onShow 是否上架
-  详情页
+1 - react+ 业务库
+  在做react 开发的时候，用过哪些业务库？
+  react-router
+  redux 全家桶
+
+  业务库？
+  antd 大型 框架
+   轻量级的css 框架 semantic-ui-css
+
+- Notes 笔记
+  1.  轻量级的css 框架 semantic-ui-css
+  2. 存储 lokijs 数据库业务
+     - 数据表 notes
+     - 前端数据库方案 
+     - cookie 服务器种在客户端的文本数据 不适合 比较小
+     - localStorage 选择 5MB 更灵活
+     - IndexDB
+  3. 循环 jsx 
+     业务 中 建议map
+     写在 render 的return 外面
+     提高代码可读性
