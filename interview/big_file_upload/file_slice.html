@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="file" id="file">
+     <script>
+         document.getElementById('file')
+         .addEventListener('change',(event)=>{
+             const file =event.target.files[0]//es6文件对象
+             console.log(file)
+             console.log(file.silce(0,1024))
+             let cur=0,size=1024*1024;//1M
+             const fileChunkList=[];//blob数组
+             while(cur<file.size){
+                 fileChunkList.push({
+                     file:file.silce(cur,cur+size)
+                 })
+                 cur+=size;
+             };
+         })
+     </script>
+</body>
+</html>
