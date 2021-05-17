@@ -1,0 +1,44 @@
+.user-info{
+    position: absolute;
+    right: 20%;
+    width: 10%;
+    height: 10rem;
+    margin-top: 1rem;
+    background-color: ghostwhite;
+    font-size: 0.5em;
+ 
+
+}
+.user{
+    width: 100%;
+    height: 30%;
+    border: 1px solid black;
+    display: block;
+
+    
+}
+.foucs{
+    margin-top: 0.rem;
+    height: 70%;
+   text-align: center;
+    border-top: 1px  solid black;
+  
+}
+
+.writer{
+    width: 100%;
+    height: 60%;
+    margin-top: 0.5rem;
+    display:flexbox;
+    border-top: 1px solid black;
+    border-left:1px solid black ;
+    border-right: 1px solid black;
+
+}
+.writer li{
+    width: 100%;
+    height: 20%;
+    list-style: none;
+    align-items: center;
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,18 @@
+.diary-list {
+  margin-bottom: 0.5rem;
+  position:relative;
+  top:6rem;
+
+  }
+  
+.show{
+    width: 50%;
+    margin-top: 1rem;
+    background-color: antiquewhite;
+    position: relative;
+    left: 14%;
+}
+.diary-item .am-card-header-content{
+    flex: 7 1;
+  }
+
