@@ -1,0 +1,15 @@
+<view class="title">
+ <viwe>全部</viwe>
+ <viwe>待付款</viwe>
+ <viwe>待收货</viwe>
+</view>
+ <view class="show">
+   <view class="nothing">
+     <image src="../../image/nothing.png"></image>
+     
+   </view>
+   <view class="intrudaction">
+    <text>您没有相关订单</text>
+     <button value="">到小米商城逛逛</button>
+   </view>
+ </view>

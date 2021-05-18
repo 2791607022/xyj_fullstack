@@ -1,0 +1,179 @@
+/* miniprogram/pages/user/user.wxss */
+page{
+  background-color: rgb(248, 248, 248);
+}
+.userinfo{
+  width:100% ;
+  height: 300rpx;
+  background-color: rgb(255, 79, 15);
+}
+.user-detail .avaurl{
+  margin: 0 10rpx 0 10rpx;
+  width: 55px;
+  height: 55px;
+  border: 1px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image:url(../../);
+}
+.user-detail .avaurl image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.user-detail text{
+  color: aliceblue;
+  position: relative;
+  left: 64px;
+}
+.user-detail .saoma{
+  margin: 20rpx 30rpx 0 20rpx;
+  width:46px;
+  height: 41px;
+  float:right;
+  position: relative;
+  top: -130rpx;
+}
+.user-detail .name{
+float: left;
+position: absolute;
+top:30rpx;
+}
+.user-detail .id{
+  float: left;
+  position: absolute;
+  top: 80rpx;
+  font-size: 30rpx;
+}
+.money{
+  position: relative;
+  left: 20px;
+  top:-60px;
+  display: flex;
+  flex:1;
+  justify-content: space-around;
+  color: aliceblue;
+}
+.money .type{
+  position: relative;
+  top:50rpx;
+  left: -46rpx;
+  justify-items: center;
+}
+.youhui{
+  height: 120rpx;
+  display: flex;
+  flex:1;
+  justify-content: space-between;
+  position: relative;
+  margin:0 30rpx 0 30rpx ;
+  background-color: rgb(255, 255, 255);
+  top:-70rpx;
+  border:1px solid rgb(253, 249, 249);
+  border-radius: 6px ;
+}
+.youhui .chi{
+ margin: 15rpx ;
+ display: inline-block;
+ flex:1;
+ justify-content: space-between;
+}
+.youhui text{
+  font-size: 30rpx;
+}
+.youhui a{
+  display: block;
+  font-size: 20rpx;
+  color: chocolate;
+}
+.youhui image{
+  float: right;
+  position: relative;
+  top :-40rpx;
+  left: 14rpx;
+  width: 55rpx;
+  height: 70rpx;
+}
+.another
+ {
+  display: flex;
+  flex-basis: 100px;
+  position: relative;
+  top: -60rpx;
+  flex:4;
+  justify-content:space-around;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin: 20rpx 15rpx 10rpx 15rpx;
+  font-size: 30rpx;
+ }
+ .another image{
+   display: flex;
+   justify-content: space-evenly;
+   width: 60px;
+   height: 67px;
+
+ }
+ .another text{
+   display: inline-flex;
+   position: relative;
+   position: relative;
+   top:-20rpx;
+   flex: 1;
+ }
+ .more{
+   float: right;
+   font-size: 28rpx;
+   position: relative;
+   bottom: -10rpx;
+   color: rgb(173, 173, 173);
+ }
+ .servce{
+  display: grid;/*启动网格布局，九宫格*/
+  justify-content:space-around;
+  background-color: white;
+  margin: 18rpx 20rpx 0px 20rpx;
+  border-radius: 6px;
+  font-size: 20rpx;
+  align-content: center;/*flex align-items*/
+  grid-template-columns: 40px 40px 40px 40px;
+  grid-template-rows:60px 60px;
+ }
+ .servce view{
+    width: 40px;
+    height: 50px;
+ }
+ .servce image{
+  position: relative;
+   right: -4px;
+    width: 75%;
+   height: 75%;
+   object-fit:contain;
+ }
+.servce text{
+  display: flex;
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+.about{
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 100px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin: 20rpx 15rpx 10rpx 15rpx;
+}
+.about image{
+  display: flex;
+  width: 70px;
+  height: 70px;
+  object-fit:contain;
+}
+.h2{
+  margin: 0 auto;
+  text-align: center;
+}

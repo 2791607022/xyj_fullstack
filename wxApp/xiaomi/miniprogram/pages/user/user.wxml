@@ -1,0 +1,85 @@
+  <!--miniprogram/pages/user/user.wxml-->
+
+  <view class="userinfo" >
+    <view class="user-detail" >
+      <view class="avaurl" > <image src="../../image/user.png"></image></view> 
+      <text class="name">夏原骏</text>
+      <text class="id">小米ID:203166963</text>
+      <image class="saoma" src="../../image/erweima.png" bindtap="saoma"></image>
+    </view>
+</view>
+  <view class="money" >
+        <view bindtap="mymoney">
+          <navigator url="/pages/userConsole/userConsole" open-type="navigate">
+          <text>0</text>
+          <text class="type">优惠券</text>
+        </navigator>
+        </view>
+    <view bindtap="mymoney">
+      <navigator url="/pages/userConsole/userConsole"  open-type="navigate">
+      <text>0</text>
+      <text class="type">红包</text>
+    </navigator>
+    </view>
+    <view bindtap="mymoney">
+      <navigator url="/pages/userConsole/userConsole"  open-type="navigate">
+      <text>0</text>
+      <text class="type">米金</text>
+    </navigator>
+    </view>
+    <view bindtap="mymoney">
+      <navigator url="/pages/userConsole/userConsole"  open-type="navigate">
+      <text>0</text>
+      <text class="type">F码</text>
+      </navigator>
+    </view>
+  </view>
+ 
+  <view class="youhui">
+  <view class="chi">   <text>会员中心 </text><navigator url="/pages/userConsole/userConsole"  open-type="navigate"><a href="">新权益><image src="../../image/huiyuan.png"></image></a></navigator></view>
+    <view class="chi" id="2"><text>米金商城</text><navigator url="/pages/userConsole/userConsole" open-type="navigate"><a href="">限量神券> <image src="../../image/shangchen.png"></image></a></navigator></view>
+    <view class="chi"><text>连接设备</text><navigator url="/pages/userConsole/userConsole" open-type="navigate"><a href="">领取米金><image src="../../image/shebei.png"></image></a></navigator></view>
+  </view>
+  
+  <view class="rest">
+    <view class="another">  
+      <navigator url="/pages/userConsole/userConsole" open-type="navigate"><view> <image src="../../image/my/pay.png"></image></view></navigator>
+      <navigator url="/pages/userConsole/userConsole"  open-type="navigate"> <view> <image src="../../image/my/shop.png"></image></view></navigator>
+        <navigator url="/pages/userConsole/userConsole" open-type="navigate"><view> <image src="../../image/my/price.png"></image></view></navigator>
+          <navigator url="/pages/userConsole/userConsole"  open-type="navigate"><view> <image src="../../image/my/all.png"></image></view> </navigator>
+  </view>
+
+  <view class="another">  
+    <navigator url="/pages/userConsole/userConsole"  open-type="navigate"> <view> <image src="../../image/my/tuijian.png"></image><text>精品推荐</text></view></navigator>
+      <navigator url="/pages/userConsole/userConsole"  open-type="navigate"> <view> <image src="../../image/my/bf.png"></image><text>优先购</text></view></navigator>
+        <navigator url="/pages/userConsole/userConsole" open-type="navigate"> <view> <image src="../../image/my/pingtuan.png"></image><text>1分拼团</text></view></navigator>
+          <navigator url="/pages/userConsole/userConsole" open-type="navigate"> <view > <image src="../../image/my/rank.png"></image><text>小米榜单</text></view></navigator>
+  </view>
+
+  </view>  <h3>我的服务</h3>   <a class="more">查看更多></a>
+
+  <view class="servce">
+
+          <view class="box"> <image src="../../image/servce/s1.png"></image><text>小米之家</text></view>
+          <view class="box"><image src="../../image/servce/s2.png"></image><text>服务网点</text></view>
+          <view class="box"><image src="../../image/servce/s4.png"></image><text>耗材服务</text></view>
+          <view class="box"><image src="../../image/servce/s3.png"></image><text>在线说明书</text></view>
+          <view class="box"><image src="../../image/servce/s5.png"></image><text>维修价格</text></view>
+          <view class="box"><image src="../../image/servce/s6.png"></image><text>以旧换新</text></view>
+          <view class="box"><image src="../../image/servce/s7.png"></image><text>安装服务</text></view>
+          <view class="box"><image src="../../image/servce/s8.png"></image><text>在线客服</text></view>
+     
+  </view>
+  <view class="about">
+  
+    <navigator url="/pages/userConsole/userConsole"  open-type="navigate"> <view><image src="../../image/servce/s9.png"></image></view>
+    </navigator>
+      <navigator url="/pages/userConsole/userConsole"  open-type="navigate"> <view><image src="../../image/servce/s10.png"></image></view>
+    </navigator>
+      <navigator url="/pages/userConsole/userConsole"  open-type="navigate"><view><image src="../../image/servce/s11.png"></image></view>
+      </navigator>
+        <navigator url="/pages/userConsole/userConsole"  open-type="navigate">  <view><image src="../../image/servce/s12.png"></image></view>
+        </navigator>
+ 
+  </view>
+ <view class="h2"><text>为你推荐</text></view>

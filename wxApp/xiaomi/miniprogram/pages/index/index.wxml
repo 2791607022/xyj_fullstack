@@ -1,0 +1,25 @@
+
+<view>
+  <!-- 自定义头部 -->
+  <view class='nav bg-white' style='height:45px'>
+    <view class='nav-title'>
+      <image src="https://gss3.bdstatic.com/84oSdTum2Q5BphGlnYG/timg?wapp&quality=80&size=b150_150&subsize=20480&cut_x=0&cut_w=0&cut_y=0&cut_h=0&sec=1369815402&srctrace&di=de30d6133e3cd88548e3a3efe3c6a428&wh_rate=null&src=http%3A%2F%2Ftiebapic.baidu.com%2Fforum%2Fwh%3D120%2C120%2Fsign%3D14e7c187bc64034f0f98ca079df35500%2Fbd3eb13533fa828bf90292b9ea1f4134970a5a42.jpg"></image>
+      <view class="INinputheader">
+        <icon class="INsearchicon" type="search" size="13"/>
+        <input class="weui-input" placeholder="搜索商品"/>
+      </view>
+    </view>
+  </view>
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y >
+    <view class='hidden'>
+      <!-- 正文 -->
+      <swiper indicator-active-color="#fff" autoplay="true" circular="true" duration="{{duration}}" interval="{{interval}}" indicator-dots="true">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image class="slide-image" src="{{item}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+    </view>
+  </scroll-view>
+</view>
