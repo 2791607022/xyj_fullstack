@@ -1,32 +1,44 @@
-import React from 'react';
+import React, {useEffect,useState}from 'react';
+import { Link } from 'react-router-dom'
+import axios from '../utils/axios'
 import { NavBar, Icon, List } from 'antd-mobile';
 import {getQueryString} from '../utils/index'
-import {Link, useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 
 const Detail = () => {
-    const id=getQueryString('id')
-    const history=useHistory ()
+  const id = getQueryString('id')
+  // console.log(id);
+  let item=null;
+  const history = useHistory()
+  const [detail, setDetail] = useState({})
+  useEffect(() => {
+    axios.post(`/detail/${id}`).then(({data}) => {
+      console.log(data[0].id,'-----------');
+      setDetail(data[0])
+    })
+  }, ['detail'])
+  console.log(detail)
+ 
+         
   return (
     <div className="diary-detail">
-      <NavBar
-        mode="light"
-        icon={<Icon type="left" />}
-        onLeftClick={()=>history.goBack()}
-        rightContent={<Link to={{pathname:'edit'}}><Icon key="1" type="ellipsis" ></Icon></Link>}
-      >
-        明天跟小米一起吃饭{id}
-      </NavBar>
-
-      <List renderHeader={() => '2021-01-09'} className="my-list">
-        <List.Item wrap>
-          单个连续模块垂直排列，显示当前的内容、状态和可进行的操作。
-          eg：联系人列表。当你需要一个 infinite scroll 列表时，请使用 ListView。
-          一般由主要信息、主要操作、次要信息、次要操作组成。
-          主要信息和主要操作放在列表的左边，次要信息和次要操作放在列表的右边
-        </List.Item>
-      </List>
+         <NavBar mode="light"
+         icon={<Icon type="left" />}
+         onLeftClick={()=>history.goBack()}
+         rightContent={<Link to={{ pathname: 'edit', search: `?id=${id}`}}><Icon key="1" type="ellipsis" ></Icon></Link>}
+       >
+         
+       {detail.title}
+       </NavBar>
+       <List renderHeader={() => ``} className="my-list">
+         <List.Item wrap>
+         {detail.content}
+         </List.Item>
+       </List>
     </div>
   )
 }
+
+
 
 export default Detail

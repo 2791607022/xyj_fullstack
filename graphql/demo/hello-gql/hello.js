@@ -46,7 +46,7 @@ const root = {
     }
   },
   hero:() => {
-    return "I am icon man 陈睦景";
+    return "I am icon man **";
   },
   user: () => {
     return {

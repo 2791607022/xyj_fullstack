@@ -1,4 +1,4 @@
-import {createElement,render,renderDOM} from './element'//DOM->virtualDOM
+import {createElement,render,renderDOM,diff} from './element'//DOM->virtualDOM
 import React from 'react';
 import './index.css';
 import App from './App';
@@ -18,7 +18,18 @@ console.log(virtualDOM)
 let el=render(virtualDOM)
 console.log(el,'++++')
 
+let virtualDOM2=createElement('ul',{
+  class:'list-group'
+},[createElement('li',{class:'item active'},['七里香']),
+createElement('li',{class:'item'},['七里香']),
+createElement('li',{class:'item'},['七里香']),
+])
+
 renderDOM(el,document.getElementById('root'))
+
+//补丁
+let patches=diff(virtualDOM,virtualDOM2)
+console.log(patches)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

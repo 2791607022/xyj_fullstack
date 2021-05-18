@@ -1,4 +1,4 @@
-import React from 'react'
+
 interface person{
     img:string;
     id:number;
@@ -7,8 +7,8 @@ interface person{
 }
 const Row=(person:person)=>{
     return(
-        <>
-        </>
+        <div>
+        </div>
     )
 }
 

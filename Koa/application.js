@@ -13,18 +13,28 @@ class Koa extends EventEmitter{
         this.request=request
         this.response=response
     }
+    handleRequest(req,res){
+        let ctx=this.createContext(req,res)
+        this.fn(ctx)
+    }
 
     listen(...args){
-        let server=http.createServer(this.fn)
+        let server=http.createServer(this.handleRequest.bind(this))
         server.listen(...args)
 
     }
 
-    createContext(){
+    createContext(req,res){
         const ctx=Object.create(this.context)
         const request=ctx.request=Object.create(this.request)
         const reponse=ctx.response=Object.create(this.response)
+        ctx.req=request.req=rseponse.req=req
+        ctx.res=reponse.res=response.res=res
+        request.ctx=reponse.ctx=ctx
+        request.reponse=reponse
+        reponse.request=request
 
+        return ctx
     }
 }
 

@@ -9,7 +9,6 @@ async function testAsync(){// 函数前面加async 只是声明 这个函数内�
     catch (error){
       console.log(error)
     }
-     
 }
 
 function testAsync(){

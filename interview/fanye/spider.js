@@ -23,3 +23,4 @@ module.exports=(pageStart)=>{//common.js   CMD  es6
         })
     })
 }
+

@@ -48,6 +48,7 @@ const renderDOM=(el,target)=>{
   export {
     createElement,
     render,
-    renderDOM
+    renderDOM,
+
   }
   

@@ -7,3 +7,4 @@ console.log(Number([]));//显示类型转换
 console.log({}=={})//false;
 console.log(Number([]))//0
 console.log(Number(![]))//0
+console.log(![],'+++')

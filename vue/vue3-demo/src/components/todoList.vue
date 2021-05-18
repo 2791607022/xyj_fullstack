@@ -5,7 +5,7 @@
       <input type="text" class="new-todo" placeholder="想干的事" @keyup.enter="addTodo" v-model="newTodo">
     </header>
   </section>
-  <section class="main">
+<section class="main">
     <ul class="todo-list">
       <li v-for="(todo ,index) in todos" :key="todo.id" class="todo">
         <div class="view">

@@ -3,6 +3,8 @@
   <h1>{{count}}*2={{double}}</h1>
  <h2>{{num}}</h2>
   <button @click="add"> 累加</button>
+  
+    
 </div>
 </template>
 

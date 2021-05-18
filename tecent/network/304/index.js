@@ -28,7 +28,7 @@ app.get('/demo.js',(req,res)=>{
     //返回文件
     const jsPath = path.resolve(__dirname, './static/js/demo.js');
     let status = fs.statSync(jsPath);
-    // console.log(status, '--------------');
+    console.log(status, '--------------');
     let lastModified = status.mtime.toUTCString();
     let count = fs.readFileSync(jsPath);
     let etag=md5(count);//md5编码 进行编码比对

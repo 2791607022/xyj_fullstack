@@ -2,8 +2,8 @@ const Koa=require('koa')
 
 const app=new Koa()
 
-app.use((ctx,next)=>{
-    ctx.body="hello world"
+app.use((req,res)=>{//ctx 代指 koa
+   res.end("hello world")
 })
 
 app.listen(3001)

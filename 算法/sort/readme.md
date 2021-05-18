@@ -59,15 +59,33 @@
  6. 四路归并
  7. 堆排序
  8. 基数排序
- 9. 技术排序
+ 9. 计数排序
+     function countSort(ary) {
+        let newAry = new Array(ary.length).fill(0);
+        for (const value of ary) {
+            newAry[value]++;
+        }
+        ary = [];
+        // 给ary重新赋值
+        for(var i =0; i<newAry.length; i++) {
+            // 循环数字次数
+            for(var k = newAry[i]; k>0; k--) {
+                ary.push(i);
+            }
+        }
+        newAry = null;
+        return ary;
+    }  
+
+
  10. 桶排序
 
 
  时间复杂度：渐近记法 
-        1     2     3   
- 最差  n^2    n^2   n^2
- 最好  n^2    n^2   n
- 平均  n^2    n^2   n^2
+        1     2     3       4      5 
+ 最差  n^2    n^2   n^2          nlog2 N      
+ 最好  n^2    n^2   n            nlog2 N
+ 平均  n^2    n^2   n^2     n^2     n^2`
  递归遍历树的空间复杂度 log2 N 是树的高度 
  
 

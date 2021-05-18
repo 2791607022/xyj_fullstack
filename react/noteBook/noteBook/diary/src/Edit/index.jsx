@@ -1,8 +1,29 @@
-import React, { useState } from 'react';
+import React, {useEffect,useState}from 'react';
 import './style.css'
-import {List,InputItem,TextareaItem,DatePicker} from 'antd-mobile'
+import { Link } from 'react-router-dom'
+import axios from '../utils/axios'
+import './style.css'
+import {getQueryString} from '../utils/index'
+import {List,InputItem,TextareaItem,DatePicker,Button} from 'antd-mobile'
 const Edit=()=>{
-    const [date,setDate]=useState()
+  const id=getQueryString('id')
+  const [date,setDate]=useState()
+    const [list,setList]=useState([]);
+   //页面重新渲染的时候就会执行
+   useEffect(()=>{//页面重新渲染的时候就会执行
+    
+    axios.get('/list').then(({data})=>{
+      console.log(data);
+      setList(data);
+    })
+  },[])
+
+      const update=()=>{
+        console.log(id,'+-+-+-')
+      axios.post(`/update/${id}`).then(({data})=>{
+        console.log(data,'')
+      })}
+
    return (
      <div className="diary-edit">
          <List renderHeader={()=>'编辑日记'}>
@@ -28,6 +49,7 @@ const Edit=()=>{
             </DatePicker>
 
          </List>
+         <Button type="primary" onClick={()=>update()}>确定更改</Button>
      </div>
    )
 }
