@@ -43,5 +43,5 @@ function subarrySum(nums){
              }
          }
      }
-
 }
+console.log(subarrySum([2,3,4,7,12,34,67]));

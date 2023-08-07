@@ -55,8 +55,7 @@ function insert2(arr){
     {
         return
     }
-    let index,
-    for(leti=1;i<length;i++)
+    for(let i=1;i<length;i++)
     {
         let left=0,right=i-1,key=arr[i]
         while(right>=left)
