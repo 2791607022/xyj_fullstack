@@ -3,7 +3,7 @@
 
 ### 复习要点
     1. React，Mobx,React Native [65% 8.8-8.9] |
-    2. Vue2, Vue3 [55% 8.10] |
+    2. Vue2, Vue3 [55% 8.10] | [80% 8.11]
     3. JavaScript
     4. 总结提炼项目经验
     4. HTML5, CSS3
