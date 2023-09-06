@@ -6,9 +6,7 @@
     2. Vue2, Vue3 [55% 8.10] | [80% 8.11]
     3. JavaScript [50% 8.12] | [9.4]
     4. 总结提炼项目经验
-    4. HTML5, CSS3
-    5. TypeScript
+    5. HTML5, CSS3 ，TypeScript [9.5] | [9.6]
     6. Http/Https, TCP/UDP, WebScoket
-    7. 移动端适配，跨域，前端优化
-    8. 浏览器
-    9. ...
+    7. 浏览器
+    8. ...
