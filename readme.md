@@ -7,6 +7,6 @@
     3. JavaScript [50% 8.12] | [9.4]
     4. 总结提炼项目经验
     5. HTML5, CSS3 ，TypeScript [9.5] | [9.6]
-    6. Http/Https, TCP/UDP, WebScoket
+    6. Http/Https, TCP/UDP, WebScoket [9.7]
     7. 浏览器
     8. ...
