@@ -1,0 +1,42 @@
+.content {
+   height: 162px;
+   margin-right: 26px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.title {
+    font-size: 36px;
+    color: #FFE9B0;
+    line-height: 36px;
+}
+
+.description {
+    margin-top: 4px;
+    font-size: 22px;
+    color: #FFE9B0;
+    line-height: 30px;
+}
+
+.time {
+    margin-top: 16px;
+    font-size: 20px;
+    color: #FFE9B0;
+    line-height: 28px;
+}
+
+.button {
+    height: 64px;
+    width: 146px;
+    border-radius: 32px;
+    background-color: #FFE9B0;
+    display: flex;
+    align-items: center;
+}
+.status {
+    font-size: 36px;
+    color: #A45927;
+    margin:0 auto;
+}
+

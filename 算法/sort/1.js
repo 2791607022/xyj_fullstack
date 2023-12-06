@@ -1,4 +1,4 @@
-function bubleSort(arr) {
+function bubleSort(arr) {  // 冒泡排序
     var len = arr.length;
     for (let outer = len ; outer >= 2; outer--) {
         for(let inner = 0; inner <=outer - 1; inner++) {
@@ -14,7 +14,7 @@ function bubleSort(arr) {
 console.log(bubleSort([2,24,5,1,7,8,9,4,5,6]))
 
 
-function select(arr)
+function select(arr) // 选择排序
 {
     var len =arr.length
     for(let i =0;i<len;i++)
@@ -34,7 +34,7 @@ function select(arr)
 
 console.log(select([2,24,5,1,7,8,9,4,5,6]))
 
-function insert(arr){
+function insert(arr){ // 插入排序
         for(let i = 1; i < arr.length; i++) {  //外循环从1开始，默认arr[0]是有序段
             for(let j = i; j > 0; j--) {  //j = i,将arr[j]依次插入有序段中
                 if(arr[j] < arr[j-1]) {
@@ -78,7 +78,7 @@ function insert2(arr){
 
 }
 
-const shellSort = arr => {
+const shellSort = arr => { // 堆排序
     const length = arr.length;
     if (length <= 1) return;
     let interval = parseInt(length / 2);
@@ -101,7 +101,7 @@ shellSort(a);
 console.log(a)
 
 
-function quickSort(arr) {
+function quickSort(arr) {  // 快速排序
     if(arr.length <= 1) { 
         return arr;  //递归出口
     }
@@ -162,7 +162,7 @@ const merge=(left,right)=>{
 }
 
 
-function merge(){
+function merge(){ // 归并排序
     let length=arr.length;
     if(length<=1)return
 
