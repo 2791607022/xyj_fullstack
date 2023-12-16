@@ -405,9 +405,9 @@
         
         2.Promise.race 方法接收一个 Promise 数组，返回一个新的 Promise 对象。该 Promise 对象的状态由数组中最先返回结果的元素决定。
 
-        3.Promise.allSettled 
+        3.Promise.allSettled 方法接收一个 Promise 数组,它可用于并行执行独立的异步操作，并收集这些异步操作的结果，最后将收集到的结果 resolve出来
 
-        4.Promise.any 
+        4.Promise.any 与 Promise.all 可以看做是相反的.Promise.any 中只要有一个 Promise 实例成功就成功，只有当所有的 Promise 实例失败时 Promise.any 才失败
 
 #### async/await
 

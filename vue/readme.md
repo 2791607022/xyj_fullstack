@@ -87,6 +87,11 @@
         - mapMutations 用于在组件中映射mutation内的方法，以便在组件中直接使用
         - mapActions  用于在组件中映射action内的方法，以便在组件中直接使用
 
+    - 解决vuex 刷新后数据丢失
+        1.在页面刷新的前将vuex中的数据直接保存到浏览器缓存中（sessionStorage）
+        2.在页面刷新路由跳转前再次请求远程数据，使之动态更新vuex数据（该请求必须是在路由跳转前，以防页面已经加载完成了，还没有获取到后台返回的数据）
+        3.使用插件，vuex-persistedstate，vuex-along。
+
 ### v-model
     1.介绍：v-model 是 Vue 框架提供的众多指令中的一个，其主要作用是实现在表单 <input>、<textarea> 及 <select> 标签元素上创建双向数据绑定。
     2.v-model 在本质上是一种v-bind 和v-on 结合的语法糖，对于input标签来说，使用 v-model绑定一个值，相当于使用 v-bind 绑定value属性的值, 使用v-on绑定标签上的input事件监听到函数中，函数会获取最新的值并赋值到绑定的属性中。它会根据不同的标签分别绑定不同属性值并监听属性值改变对应的原生事件。双向绑定核心涉及到的是vue 响应式原理
@@ -162,6 +167,8 @@
 
 
 ### vue-router
+
+### 路由权限 
 
 ### Vue3 
     [https://juejin.cn/post/7227453567686033468#heading-3]
